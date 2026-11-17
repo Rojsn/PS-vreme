@@ -1,4 +1,4 @@
-module github.com/rojson/PS-vreme
+module github.com/Rojsn/PS-vreme
 
 go 1.27.3
 

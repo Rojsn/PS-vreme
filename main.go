@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/rojson/PS-vreme/vreme" // Zamenjajte z vašo potjo modula
+	"github.com/Rojsn/PS-vreme/vreme" // Zamenjajte z vašo potjo modula
 	"github.com/urfave/cli/v3"
 )
 
