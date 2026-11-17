@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/Rojsn/PS-vreme/vreme" // Zamenjajte z vašo potjo modula
+	"github.com/Rojsn/PS-vreme/vreme"
 	"github.com/urfave/cli/v3"
 )
 
@@ -38,13 +38,11 @@ func main() {
 
 			postaje := make(map[string]vreme.Postaja)
 
-			// Uporaba DodajPostajo, ker so polja strukture neizvožena
 			vreme.DodajPostajo(postaje, "KP", "Koper Luka", "Obalna")
 			vreme.DodajPostajo(postaje, "KR", "Kredarica", "Gorenjska")
 			vreme.DodajPostajo(postaje, "LJ", "Ljubljana Bežigrad", "Osrednja")
 			vreme.DodajPostajo(postaje, "MB", "Maribor Tabor", "Štajerska")
 
-			// Začetne meritve
 			vreme.DodajMeritev(postaje, "KP", 24.5, minT, maxT)
 			vreme.DodajMeritev(postaje, "KP", 27.0, minT, maxT)
 			vreme.DodajMeritev(postaje, "KP", 28.4, minT, maxT)

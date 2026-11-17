@@ -1,4 +1,3 @@
-// Package vreme omogoča upravljanje z vremenskimi postajami in meritvami.
 package vreme
 
 import (
@@ -12,7 +11,6 @@ type Postaja struct {
 	meritve []float64
 }
 
-// DodajPostajo omogoča ustvarjanje postaje izven paketa (ker so polja neizvožena)
 func DodajPostajo(postaje map[string]Postaja, oznaka, ime, kraj string) {
 	postaje[oznaka] = Postaja{ime: ime, kraj: kraj, meritve: []float64{}}
 }
@@ -31,7 +29,7 @@ func DodajMeritev(postaje map[string]Postaja, oznaka string, temperatura float64
 	postaje[oznaka] = p
 }
 
-// statistika ostane skrita (z malo začetnico)
+// skrita
 func statistika(postaje map[string]Postaja, oznaka string, stMeritev int) (najnizja, najvisja, povprecna float64, ok bool) {
 	p, oki := postaje[oznaka]
 	if len(p.meritve) < stMeritev || oki == false {
